@@ -1,11 +1,5 @@
-package dovbenko.hw2.tsk1.game;
+package dovbenko.hw2.tsk1;
 
-/**
- * The class of cells of the checkers board
- *
- * @author Vladislav Dovbenko
- * @version 1.0
- */
 public final class BoardCell {
     private final Board board;
     private final String name;
@@ -14,14 +8,6 @@ public final class BoardCell {
     private final Color color;
     private Checker checker;
 
-    /**
-     * Constructor of class objects
-     *
-     * @param name         name in the format a1, a2, ... , h8.
-     * @param rowNumber    index of the row of the board cell
-     * @param columnNumber index of the column of the board cell
-     * @param color        color of the board cell
-     */
     public BoardCell(Board board, String name, int rowNumber, int columnNumber, Color color) {
         this.board = board;
         this.name = name;
@@ -56,6 +42,10 @@ public final class BoardCell {
 
     public String getName() {
         return name;
+    }
+
+    public Board getBoard() {
+        return board;
     }
 
     @Override

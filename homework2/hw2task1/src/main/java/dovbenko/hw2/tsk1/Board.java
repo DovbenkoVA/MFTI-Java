@@ -1,9 +1,4 @@
-package dovbenko.hw2.tsk1.game;
-
-import dovbenko.hw2.tsk1.exception.BusyCellException;
-import dovbenko.hw2.tsk1.exception.GeneralErrorException;
-import dovbenko.hw2.tsk1.exception.InvalidMoveException;
-import dovbenko.hw2.tsk1.exception.WhiteCellException;
+package dovbenko.hw2.tsk1;
 
 import java.util.Collections;
 import java.util.Locale;
@@ -12,13 +7,6 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * A class of the board for checkers and an interface for entering initial positions, moves and getting the final
- * position of checkers
- *
- * @author Vladislav Dovbenko
- * @version 1.0
- */
 public final class Board {
     private static final Pattern POSITIONS_PATTERN = Pattern.compile("\\b[a-h][1-8]");
     private static final Pattern QUINS_POSITIONS_PATTERN = Pattern.compile("\\b[A-H][1-8]");
@@ -27,9 +15,6 @@ public final class Board {
     private static final Pattern MOVE_PATTERN = Pattern.compile("([a-h][1-8])-([a-h][1-8])");
     private static final Pattern HIT_PATTERN = Pattern.compile("([a-h][1-8])(:[a-h][1-8])+");
     private static final char[] COORDINATE_SYMBOLS = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
-    /**
-     * Size of the board. The size of the board for checkers is 8 by 8 cells.
-     */
     private static final int SIZE = 8;
 
     private final HashMap<String, BoardCell> boardIndex;
@@ -58,21 +43,12 @@ public final class Board {
         return result;
     }
 
-    /**
-     * Constructor of the instance. The array of cells and the index of cell search by name are automatically
-     * initialized.
-     */
     public Board() {
         this.cells = initializeNewCells();
         this.boardIndex = newBoardIndex();
 
     }
 
-    /**
-     * Method of getting the size of the board
-     *
-     * @return size of the board {@link Board#SIZE}
-     */
     public static int getSize() {
         return SIZE;
     }
@@ -87,26 +63,12 @@ public final class Board {
         return result;
     }
 
-    /**
-     * Method of getting the name of the board cell by coordinates
-     *
-     * @param row    index of the row of the board cell
-     * @param column index of the column of the board cell
-     * @return cell name in the format a1, a2, ... , h8
-     */
     public static String nameByCoordinates(int row, int column) {
 
         return String.valueOf(Board.COORDINATE_SYMBOLS[column]) + (row + 1);
 
     }
 
-    /**
-     * Method of getting the board cell by coordinates
-     *
-     * @param row    Index of the row of the board cell
-     * @param column Index of the column of the board cell
-     * @return board cell {@link BoardCell}
-     */
     public BoardCell getCellByCoordinates(int row, int column) {
         BoardCell result = null;
         if (coordinatesIsCorrect(row, column)) {
@@ -115,12 +77,6 @@ public final class Board {
         return result;
     }
 
-    /**
-     * Method of getting the board cell by name
-     *
-     * @param cellName name of the board cell
-     * @return board cell {@link BoardCell}
-     */
     public BoardCell getCellByName(String cellName) {
         String searchKey = cellName.toLowerCase(Locale.ROOT);
 
@@ -141,18 +97,15 @@ public final class Board {
     private void makeMove(String record)
             throws BusyCellException, GeneralErrorException, WhiteCellException, InvalidMoveException {
         Matcher matcher = POSITIONS_PATTERN.matcher(record);
-        if (matcher.find()) {
-            BoardCell startCell = getCellByName(matcher.group());
-            checkStartCellToMove(startCell);
+        matcher.find();
+        BoardCell startCell = getCellByName(matcher.group());
+        checkStartCellToMove(startCell);
 
-            if (matcher.find()) {
-                BoardCell finishCell = getCellByName(matcher.group());
+        matcher.find();
+        BoardCell finishCell = getCellByName(matcher.group());
 
-                checkFinishCellToMove(finishCell);
-                moveChecker(startCell, finishCell);
-            }
-
-        }
+        checkFinishCellToMove(finishCell);
+        moveChecker(startCell, finishCell);
 
     }
 
@@ -163,7 +116,7 @@ public final class Board {
 
         checkCellBusy(finishCell);
         checkCellColor(finishCell);
-        boolean isKing = checker.getIsKing();
+        Boolean isKing = checker.getIsKing();
 
         int startCellRow = startCell.getRowNumber();
         int startCellColumn = startCell.getColumnNumber();
@@ -190,9 +143,6 @@ public final class Board {
         }
 
         Checker targetChecker = targetCell.getChecker();
-        if (targetChecker == null) {
-            throw new GeneralErrorException();
-        }
         checker.hit(targetChecker, finishCell);
 
     }
@@ -200,19 +150,18 @@ public final class Board {
     private void makeHits(String record)
             throws BusyCellException, GeneralErrorException, WhiteCellException {
         Matcher matcher = POSITIONS_PATTERN.matcher(record);
-        if (matcher.find()) {
-            BoardCell startCell = getCellByName(matcher.group());
+        matcher.find();
+        BoardCell startCell = getCellByName(matcher.group());
 
-            checkCheckerExists(startCell);
+        checkCheckerExists(startCell);
 
-            while (matcher.find()) {
-                BoardCell nextCell = getCellByName(matcher.group());
-                makeHit(startCell, nextCell);
-                startCell = nextCell;
-            }
-            Checker checker = startCell.getChecker();
-            checker.checkSetIsKing();
+        while (matcher.find()) {
+            BoardCell nextCell = getCellByName(matcher.group());
+            makeHit(startCell, nextCell);
+            startCell = nextCell;
         }
+        Checker checker = startCell.getChecker();
+        checker.checkSetIsKing();
     }
 
     private void checkFinishCellToMove(BoardCell cell)
@@ -270,10 +219,9 @@ public final class Board {
 
     /**
      * Checks the ability to beat the checker at the beginning of the turn
-     *
-     * @param cell {@link BoardCell} the cell on which the checker is placed at the beginning of the turn
+     * @param cell the cell on which the checker is placed at the beginning of the turn
      * @throws InvalidMoveException In the case when the checkers are moved without beating the checkers,
-     *                              but there is a possibility of taking, an exception is called
+     * but there is a possibility of taking, an exception is called
      */
     private void checkCheckersToHit(BoardCell cell) throws InvalidMoveException {
         if (isPossibleToHit(cell, 1, 1)) {
@@ -296,14 +244,13 @@ public final class Board {
     }
 
     /**
-     * Checks the ability to beat a checker on the specified cell
-     *
-     * @param cell      {@link BoardCell} original board cell
-     * @param cellToHit {@link BoardCell} specified cell
-     * @return true if the opportunity to be a checker exists, else false.
+     * CChecks the ability to beat a checker on the specified cell
+     * @param cell original board cell
+     * @param cellToHit specified cell
+     * @return
      */
     private boolean canHitChecker(BoardCell cell, BoardCell cellToHit) {
-        boolean result = false;
+        Boolean result = false;
         Checker checker = cell.getChecker();
         Checker checkerToHit = cellToHit.getChecker();
         if (checker != null && checkerToHit != null && checker.getColor() != checkerToHit.getColor()) {
@@ -330,20 +277,20 @@ public final class Board {
 
     /**
      * Checks the possibility of taking checkers in the specified direction.
-     *
-     * @param cell        {@link BoardCell} the cell of the board starting from which the check is performed
-     * @param deltaRow    offset by table rows
+     * @param cell the cell of the board starting from which the check is performed
+     * @param deltaRow offset by table rows
      * @param deltaColumn offset by table columns
      * @return true if there is an opportunity to beat the checker else false
      */
     private boolean isPossibleToHit(BoardCell cell, int deltaRow, int deltaColumn) {
-        boolean result = false;
-        boolean isKing = cell.getChecker().getIsKing();
+        Boolean result = false;
+        Boolean isKing = cell.getChecker().getIsKing();
+        int boardSize = Board.getSize();
         int row = cell.getRowNumber();
         int column = cell.getColumnNumber();
         row += deltaRow;
         column += deltaColumn;
-        while (coordinatesIsCorrect(row, column)) {
+        while (row >= 0 && row < boardSize && column >= 0 && column < boardSize) {
             BoardCell cellToHit = this.getCellByCoordinates(row, column);
             if (cellToHit != null) {
                 if (canHitChecker(cell, cellToHit)) {
@@ -366,12 +313,6 @@ public final class Board {
 
     }
 
-    /**
-     * The method sets the initial position of the checkers on the board by a row of entries.
-     *
-     * @param stringPosition row of entries.
-     * @param color {@link Color} the color of the checkers.
-     */
     public void setStartingPosition(String stringPosition, Color color) {
         Matcher matcher = Board.POSITIONS_PATTERN.matcher(stringPosition);
         while (matcher.find()) {
@@ -391,25 +332,14 @@ public final class Board {
         this.stringMovies = stringMovies;
     }
 
-    private boolean isHit(String record) {
+    private Boolean isHit(String record) {
         return Board.HIT_PATTERN.matcher(record).find();
     }
 
-    private boolean isMove(String record) {
+    private Boolean isMove(String record) {
         return Board.MOVE_PATTERN.matcher(record).find();
     }
 
-    /**
-     * The main method that performs the movement and taking of checkers.
-     *
-     * @throws BusyCellException     the target cell is occupied
-     * @throws WhiteCellException    the target cell is white (checkers are placed only on black and, due to the rules,
-     *                               cannot be on white)
-     * @throws InvalidMoveException  it is mandatory to beat in checkers. Moreover, it is necessary to beat the whole
-     *                               chain to the end. The error is displayed if the player has an option to beat the
-     *                               checker, but he does not use it, but goes to another cell.
-     * @throws GeneralErrorException other errors
-     */
     public void makeMovementsAndHits()
             throws BusyCellException, GeneralErrorException, WhiteCellException, InvalidMoveException {
         Matcher matcher = Board.MOVEMENTS_PATTERN.matcher(this.stringMovies);
@@ -423,15 +353,10 @@ public final class Board {
         }
     }
 
-    /**
-     * Returns the final state of checkers
-     *
-     * @return the structure of checkers on the board
-     */
     private HashMap<Color, ArrayList<String>> getCheckersPositions() {
         HashMap<Color, ArrayList<String>> result = new HashMap<>();
-        ArrayList<String> namesWhite = new ArrayList<>();
-        ArrayList<String> namesBlack = new ArrayList<>();
+        ArrayList<String> namesWhite = new ArrayList<String>();
+        ArrayList<String> namesBlack = new ArrayList<String>();
 
         for (int j = 0; j < SIZE; j++) {
             for (int i = 0; i < SIZE; i++) {
@@ -465,17 +390,16 @@ public final class Board {
 
     /**
      * Returns the final position of the checkers on the board.
-     *
      * @return a string containing the final arrangement of checkers on the board.
      */
     public String stringCheckersPositions() {
         HashMap<Color, ArrayList<String>> checkersPositions = getCheckersPositions();
         StringBuilder stringBuilder = new StringBuilder();
-        for (String name : checkersPositions.get(Color.WHITE)) {
+        for (String name: checkersPositions.get(Color.WHITE)) {
             stringBuilder.append(name).append(" ");
         }
         stringBuilder.append("\n");
-        for (String name : checkersPositions.get(Color.BLACK)) {
+        for (String name: checkersPositions.get(Color.BLACK)) {
             stringBuilder.append(name).append(" ");
         }
         return stringBuilder.toString();

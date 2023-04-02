@@ -12,6 +12,13 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * A class of the board for checkers and an interface for entering initial positions, moves and getting the final
+ * position of checkers
+ *
+ * @author Vladislav Dovbenko
+ * @version 1.0
+ */
 public final class Board {
     private static final Pattern POSITIONS_PATTERN = Pattern.compile("\\b([a-h][1-8])_([bBwW]+)");
     private static final char[] COORDINATE_SYMBOLS = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
@@ -25,6 +32,10 @@ public final class Board {
     private String stringMovies;
     private final ArrayList<ArrayList<BoardCell>> cells;
 
+    /**
+     * Constructor of the instance. The array of cells and the index of cell search by name are automatically
+     * initialized.
+     */
     public Board() {
         this.cells = initializeNewCells();
         this.boardIndex = newBoardIndex();
@@ -44,7 +55,7 @@ public final class Board {
     /**
      * Initializes the composition of the cells of the new checkers board
      *
-     * @return table of the checkers
+     * @return table of the checkers {@link Board#cells}
      */
     private ArrayList<ArrayList<BoardCell>> initializeNewCells() {
         ArrayList<ArrayList<BoardCell>> result = new ArrayList<>();
@@ -62,12 +73,24 @@ public final class Board {
         return result;
     }
 
+    /**
+     * Method of getting the name of the board cell by coordinates
+     *
+     * @param row    index of the row of the board cell
+     * @param column index of the column of the board cell
+     * @return cell name in the format a1, a2, ... , h8
+     */
     public static String nameCellByCoordinates(int row, int column) {
 
         return String.valueOf(Board.COORDINATE_SYMBOLS[column]) + (row + 1);
 
     }
 
+    /**
+     * Method of getting the size of the board
+     *
+     * @return size of the board
+     */
     public static int getSize() {
         return SIZE;
 
@@ -77,6 +100,12 @@ public final class Board {
         return (color == Color.BLACK) ? Color.WHITE : Color.BLACK;
     }
 
+    /**
+     * Method of getting the board cell by name
+     *
+     * @param cellName name of the board cell
+     * @return board cell {@link BoardCell}
+     */
     public BoardCell getCellByName(String cellName) {
         String searchKey = cellName.toLowerCase(Locale.ROOT);
 
@@ -84,6 +113,13 @@ public final class Board {
 
     }
 
+    /**
+     * Method of getting the board cell by coordinates
+     *
+     * @param row    Index of the row of the board cell
+     * @param column Index of the column of the board cell
+     * @return board cell {@link BoardCell}
+     */
     public BoardCell getCellByCoordinates(int row, int column) {
         BoardCell result = null;
         if (coordinatesIsCorrect(row, column)) {
@@ -96,6 +132,11 @@ public final class Board {
         return row >= 0 && row < Board.SIZE && column >= 0 && column < Board.SIZE;
     }
 
+    /**
+     * The method sets the initial position of the checkers on the board by a row of entries.
+     *
+     * @param stringPosition row of entries.
+     */
     public void setStartingPosition(String stringPosition) {
         Matcher matcher = Board.POSITIONS_PATTERN.matcher(stringPosition);
         while (matcher.find()) {

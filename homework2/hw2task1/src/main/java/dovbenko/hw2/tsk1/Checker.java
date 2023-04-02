@@ -1,15 +1,9 @@
-package dovbenko.hw2.tsk1.game;
+package dovbenko.hw2.tsk1;
 
-/**
- * The class of the checkers
- *
- * @author Vladislav Dovbenko
- * @version 1.0
- */
 public final class Checker {
     private BoardCell boardCell;
     private final Color color;
-    private boolean isKing;
+    private Boolean isKing;
 
     public Checker(BoardCell boardCell, Color color, Boolean isKing) {
         this.boardCell = boardCell;
@@ -30,7 +24,7 @@ public final class Checker {
         int checkerRow = checkerPosition.getRowNumber();
         int boardSize = Board.getSize();
         Color checkerColor = this.getColor();
-        boolean isGettingFinishRow = checkerRow == (boardSize - 1) && checkerColor == Color.WHITE
+        Boolean isGettingFinishRow = checkerRow == (boardSize - 1) && checkerColor == Color.WHITE
                 || checkerRow == 0 && checkerColor == Color.BLACK;
         if (isGettingFinishRow && !this.isKing) {
             this.isKing = true;
@@ -45,7 +39,7 @@ public final class Checker {
         return color;
     }
 
-    public boolean getIsKing() {
+    public Boolean getIsKing() {
         return isKing;
     }
 
