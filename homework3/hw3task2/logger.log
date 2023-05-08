@@ -1,0 +1,85 @@
+2023-05-08 16:00:30,510::Node creation started
+2023-05-08 16:00:30,566::Data storage is installed dovbenko.hw3.tsk2.datastorage.DataStorage@4f063c0a to 0
+2023-05-08 16:00:30,702::Node{nodeId=0, nextNode=1, coordinator=8, bufferStack=[DataPackage{destinationNode=8, data='363776f1-7a0c-4d2c-8229-0ba3dec6452f', startTime=20735527438700}]}
+2023-05-08 16:00:30,703::Node{nodeId=1, nextNode=2, coordinator=8, bufferStack=[DataPackage{destinationNode=1, data='5c5fb5ff-5a3c-496a-b539-73ba517d0f0c', startTime=20735527395200}, DataPackage{destinationNode=0, data='238eaad3-ea18-424d-a0f4-c28d2107e2df', startTime=20735527655800}]}
+2023-05-08 16:00:30,703::Node{nodeId=2, nextNode=3, coordinator=8, bufferStack=[DataPackage{destinationNode=1, data='0f0425ed-cd69-4f1e-bec0-a4c39a02beed', startTime=20735527110400}, DataPackage{destinationNode=2, data='ef36b137-82f2-4e6d-82dd-a19e8a98f39f', startTime=20735527830100}]}
+2023-05-08 16:00:30,704::Node{nodeId=3, nextNode=4, coordinator=8, bufferStack=[DataPackage{destinationNode=5, data='9a28a4e7-7e84-4b3b-82d5-99c64be7eb69', startTime=20735527211100}]}
+2023-05-08 16:00:30,704::Node{nodeId=4, nextNode=5, coordinator=8, bufferStack=[DataPackage{destinationNode=2, data='5f8cbb90-ae87-45ff-a16e-660640a90312', startTime=20735526838300}, DataPackage{destinationNode=7, data='2ef04452-1590-41ed-87e8-0dff130b4449', startTime=20735527053700}]}
+2023-05-08 16:00:30,705::Node{nodeId=5, nextNode=6, coordinator=8, bufferStack=[DataPackage{destinationNode=9, data='a81596bf-3ebf-4c47-8357-059620437c7c', startTime=20735527165300}, DataPackage{destinationNode=8, data='5a533ce0-6c2c-4362-9507-eae36309496f', startTime=20735527305700}, DataPackage{destinationNode=0, data='8f44e8c2-86bb-4c29-90bd-611d909a75e5', startTime=20735527741900}]}
+2023-05-08 16:00:30,705::Node{nodeId=6, nextNode=7, coordinator=8, bufferStack=[DataPackage{destinationNode=4, data='84090a3e-2e65-47f0-abbe-54c066f85984', startTime=20735527527500}]}
+2023-05-08 16:00:30,706::Node{nodeId=7, nextNode=8, coordinator=8, bufferStack=[DataPackage{destinationNode=6, data='7ec02381-ce78-4343-ab30-32a4ea3f79e6', startTime=20735527000300}, DataPackage{destinationNode=7, data='b9955bed-979e-443f-8dd6-a1b7db7bce45', startTime=20735527482300}, DataPackage{destinationNode=1, data='445c57b6-6fed-4cbb-a60a-5fd8e674b613', startTime=20735527570500}, DataPackage{destinationNode=7, data='8b5e88ab-eeb5-459b-a047-3d6f25a88990', startTime=20735527612700}]}
+2023-05-08 16:00:30,706::Node{nodeId=8, nextNode=9, coordinator=8, bufferStack=[DataPackage{destinationNode=8, data='38006dc5-458c-44f4-9712-ccf14a7e5bd0', startTime=20735526934600}, DataPackage{destinationNode=0, data='3af06407-4a36-49e3-ad33-cded95c16779', startTime=20735527698300}, DataPackage{destinationNode=4, data='5aa5d8f9-6c7d-466c-8eb3-d28e6a7c55ea', startTime=20735527786000}]}
+2023-05-08 16:00:30,706::Node{nodeId=9, nextNode=0, coordinator=8, bufferStack=[DataPackage{destinationNode=8, data='5f13726e-a881-4776-8fb2-8ae02112f9b0', startTime=20735527351000}]}
+2023-05-08 16:00:30,707::Node creation completed
+2023-05-08 16:00:30,710::Node: 0 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=8, data='363776f1-7a0c-4d2c-8229-0ba3dec6452f', startTime=20735527438700}]
+2023-05-08 16:00:30,711::Node: 4 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=2, data='5f8cbb90-ae87-45ff-a16e-660640a90312', startTime=20735526838300}, DataPackage{destinationNode=7, data='2ef04452-1590-41ed-87e8-0dff130b4449', startTime=20735527053700}]
+2023-05-08 16:00:30,710::Node: 2 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=1, data='0f0425ed-cd69-4f1e-bec0-a4c39a02beed', startTime=20735527110400}, DataPackage{destinationNode=2, data='ef36b137-82f2-4e6d-82dd-a19e8a98f39f', startTime=20735527830100}]
+2023-05-08 16:00:30,711::Node: 6 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=4, data='84090a3e-2e65-47f0-abbe-54c066f85984', startTime=20735527527500}]
+2023-05-08 16:00:30,712::Node: 0 try take data
+2023-05-08 16:00:30,712::Node: 8 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=8, data='38006dc5-458c-44f4-9712-ccf14a7e5bd0', startTime=20735526934600}, DataPackage{destinationNode=0, data='3af06407-4a36-49e3-ad33-cded95c16779', startTime=20735527698300}, DataPackage{destinationNode=4, data='5aa5d8f9-6c7d-466c-8eb3-d28e6a7c55ea', startTime=20735527786000}]
+2023-05-08 16:00:30,712::Node: 7 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=6, data='7ec02381-ce78-4343-ab30-32a4ea3f79e6', startTime=20735527000300}, DataPackage{destinationNode=7, data='b9955bed-979e-443f-8dd6-a1b7db7bce45', startTime=20735527482300}, DataPackage{destinationNode=1, data='445c57b6-6fed-4cbb-a60a-5fd8e674b613', startTime=20735527570500}, DataPackage{destinationNode=7, data='8b5e88ab-eeb5-459b-a047-3d6f25a88990', startTime=20735527612700}]
+2023-05-08 16:00:30,712::Node: 9 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=8, data='5f13726e-a881-4776-8fb2-8ae02112f9b0', startTime=20735527351000}]
+2023-05-08 16:00:30,712::Node: 3 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=5, data='9a28a4e7-7e84-4b3b-82d5-99c64be7eb69', startTime=20735527211100}]
+2023-05-08 16:00:30,712::Node: 1 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=1, data='5c5fb5ff-5a3c-496a-b539-73ba517d0f0c', startTime=20735527395200}, DataPackage{destinationNode=0, data='238eaad3-ea18-424d-a0f4-c28d2107e2df', startTime=20735527655800}]
+2023-05-08 16:00:30,712::Node: 5 Completed: 0 / 20 Buffer: [DataPackage{destinationNode=9, data='a81596bf-3ebf-4c47-8357-059620437c7c', startTime=20735527165300}, DataPackage{destinationNode=8, data='5a533ce0-6c2c-4362-9507-eae36309496f', startTime=20735527305700}, DataPackage{destinationNode=0, data='8f44e8c2-86bb-4c29-90bd-611d909a75e5', startTime=20735527741900}]
+2023-05-08 16:00:30,713::Node: 6 try take data
+2023-05-08 16:00:30,713::Node: 0 get data
+2023-05-08 16:00:30,712::Node: 4 try take data
+2023-05-08 16:00:30,713::Node: 3 try take data
+2023-05-08 16:00:30,714::Node: 3 get data
+2023-05-08 16:00:30,714::Node: 2 try take data
+2023-05-08 16:00:30,714::Node: 4 get data
+2023-05-08 16:00:30,715::Node: 6 get data
+2023-05-08 16:00:30,715::Node: 5 try take data
+2023-05-08 16:00:30,716::Node: 1 try take data
+2023-05-08 16:00:30,716::Node: 9 try take data
+2023-05-08 16:00:30,716::Node: 7 try take data
+2023-05-08 16:00:30,717::Node: 8 try take data
+2023-05-08 16:00:30,717::Move node: 0 --> 1 Package DataPackage{destinationNode=8, data='363776f1-7a0c-4d2c-8229-0ba3dec6452f', startTime=20735527438700} 
+2023-05-08 16:00:30,717::Node: 7 get data
+2023-05-08 16:00:30,717::Node: 9 get data
+2023-05-08 16:00:30,718::Node: 1 get data
+2023-05-08 16:00:30,718::Node: 5 get data
+2023-05-08 16:00:30,718::Node: 2 get data
+2023-05-08 16:00:30,720::Move node: 6 --> 7 Package DataPackage{destinationNode=4, data='84090a3e-2e65-47f0-abbe-54c066f85984', startTime=20735527527500} 
+2023-05-08 16:00:30,720::Move node: 4 --> 5 Package DataPackage{destinationNode=2, data='5f8cbb90-ae87-45ff-a16e-660640a90312', startTime=20735526838300} 
+2023-05-08 16:00:30,720::Node: 6 Buffer size: 0
+2023-05-08 16:00:30,721::Move node: 3 --> 4 Package DataPackage{destinationNode=5, data='9a28a4e7-7e84-4b3b-82d5-99c64be7eb69', startTime=20735527211100} 
+2023-05-08 16:00:30,721::Move node: 2 --> 3 Package DataPackage{destinationNode=1, data='0f0425ed-cd69-4f1e-bec0-a4c39a02beed', startTime=20735527110400} 
+2023-05-08 16:00:30,721::node: 1 Package DataPackage{destinationNode=1, data='5c5fb5ff-5a3c-496a-b539-73ba517d0f0c', startTime=20735527395200} has reached its destination
+2023-05-08 16:00:30,721::Move node: 5 --> 6 Package DataPackage{destinationNode=9, data='a81596bf-3ebf-4c47-8357-059620437c7c', startTime=20735527165300} 
+2023-05-08 16:00:30,721::Node: 8 get data
+2023-05-08 16:00:30,721::Node: 0 Buffer size: 0
+2023-05-08 16:00:30,722::Move node: 7 --> 8 Package DataPackage{destinationNode=6, data='7ec02381-ce78-4343-ab30-32a4ea3f79e6', startTime=20735527000300} 
+2023-05-08 16:00:30,722::Move node: 9 --> 0 Package DataPackage{destinationNode=8, data='5f13726e-a881-4776-8fb2-8ae02112f9b0', startTime=20735527351000} 
+2023-05-08 16:00:30,722::Node: 1 Buffer size: 2
+2023-05-08 16:00:30,723::Node: 9 Buffer size: 0
+2023-05-08 16:00:30,723::Node: 4 Buffer size: 2
+2023-05-08 16:00:30,724::Node: 7 Buffer size: 4
+2023-05-08 16:00:30,725::Node: 5 Buffer size: 3
+2023-05-08 16:00:30,725::Node: 3 Buffer size: 1
+2023-05-08 16:00:30,725::Node: 2 Buffer size: 1
+2023-05-08 16:00:30,726::node: 8 Package DataPackage{destinationNode=8, data='38006dc5-458c-44f4-9712-ccf14a7e5bd0', startTime=20735526934600} has reached its destination
+2023-05-08 16:00:30,727::Node: 8 Buffer size: 3
+2023-05-08 16:00:30,727::Data storage volume is 2
+2023-05-08 16:00:30,728::Node: 8 Completed: 2 / 20 Buffer: [DataPackage{destinationNode=0, data='3af06407-4a36-49e3-ad33-cded95c16779', startTime=20735527698300}, DataPackage{destinationNode=4, data='5aa5d8f9-6c7d-466c-8eb3-d28e6a7c55ea', startTime=20735527786000}, DataPackage{destinationNode=6, data='7ec02381-ce78-4343-ab30-32a4ea3f79e6', startTime=20735527000300}]
+2023-05-08 16:00:30,728::Node: 8 try take data
+2023-05-08 16:00:30,728::Node: 8 get data
+2023-05-08 16:00:30,731::Move node: 8 --> 9 Package DataPackage{destinationNode=0, data='3af06407-4a36-49e3-ad33-cded95c16779', startTime=20735527698300} 
+2023-05-08 16:00:30,731::Node: 8 Buffer size: 2
+2023-05-08 16:00:30,731::Data storage volume is 2
+2023-05-08 16:00:30,732::Node: 8 Completed: 2 / 20 Buffer: [DataPackage{destinationNode=4, data='5aa5d8f9-6c7d-466c-8eb3-d28e6a7c55ea', startTime=20735527786000}, DataPackage{destinationNode=6, data='7ec02381-ce78-4343-ab30-32a4ea3f79e6', startTime=20735527000300}]
+2023-05-08 16:00:30,732::Node: 8 try take data
+2023-05-08 16:00:30,732::Node: 8 get data
+2023-05-08 16:00:30,734::Move node: 8 --> 9 Package DataPackage{destinationNode=4, data='5aa5d8f9-6c7d-466c-8eb3-d28e6a7c55ea', startTime=20735527786000} 
+2023-05-08 16:00:30,734::Node: 8 Buffer size: 1
+2023-05-08 16:00:30,734::Data storage volume is 2
+2023-05-08 16:00:30,735::Node: 8 Completed: 2 / 20 Buffer: [DataPackage{destinationNode=6, data='7ec02381-ce78-4343-ab30-32a4ea3f79e6', startTime=20735527000300}]
+2023-05-08 16:00:30,735::Node: 8 try take data
+2023-05-08 16:00:30,735::Node: 8 get data
+2023-05-08 16:00:30,738::Move node: 8 --> 9 Package DataPackage{destinationNode=6, data='7ec02381-ce78-4343-ab30-32a4ea3f79e6', startTime=20735527000300} 
+2023-05-08 16:00:30,738::Node: 8 Buffer size: 0
+2023-05-08 16:00:30,738::Data storage volume is 2
+2023-05-08 16:00:30,739::Node: 8 Completed: 2 / 20 Buffer: []
+2023-05-08 16:00:30,739::Node: 8 try take data
+2023-05-08 16:00:31,742::Node: 8 get data
