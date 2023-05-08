@@ -1,0 +1,104 @@
+2023-04-26 23:19:02,689::Ship{size=BIG, type=BREAD, shipNumber=2} arrived in the tunnel
+2023-04-26 23:19:02,689::Ship{size=BIG, type=BANANAS, shipNumber=0} arrived in the tunnel
+2023-04-26 23:19:02,689::Ship{size=BIG, type=BANANAS, shipNumber=4} arrived in the tunnel
+2023-04-26 23:19:02,689::Ship{size=MEDIUM, type=BANANAS, shipNumber=3} arrived in the tunnel
+2023-04-26 23:19:02,689::Ship{size=MEDIUM, type=BREAD, shipNumber=1} arrived in the tunnel
+2023-04-26 23:19:11,568::Ship{size=BIG, type=BANANAS, shipNumber=0} is taken from the tunnel
+2023-04-26 23:19:11,568::Ship{size=BIG, type=BANANAS, shipNumber=4} is taken from the tunnel
+2023-04-26 23:19:11,568::Ship{size=BIG, type=CLOTHES, shipNumber=9} arrived in the tunnel
+2023-04-26 23:19:11,568::Ship{size=MEDIUM, type=BREAD, shipNumber=1} is taken from the tunnel
+2023-04-26 23:19:11,568::Ship{size=MEDIUM, type=BREAD, shipNumber=10} arrived in the tunnel
+2023-04-26 23:19:11,568::Ship{size=MEDIUM, type=CLOTHES, shipNumber=5} arrived in the tunnel
+2023-04-26 23:19:11,568::Ship{size=SMALL, type=BANANAS, shipNumber=6} arrived in the tunnel
+2023-04-26 23:19:11,568::Ship{size=BIG, type=CLOTHES, shipNumber=8} arrived in the tunnel
+2023-04-26 23:19:11,568::Ship{size=MEDIUM, type=BANANAS, shipNumber=3} is taken from the tunnel
+2023-04-26 23:19:11,568::Ship{size=BIG, type=BREAD, shipNumber=2} is taken from the tunnel
+2023-04-26 23:19:11,577::Ship{size=BIG, type=BREAD, shipNumber=2} awaiting loading in PierLoader{shipType=BREAD needToLoadShips=4 loadedShips=0}
+2023-04-26 23:19:11,577::Ship{size=BIG, type=BANANAS, shipNumber=0} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:11,577::Ship{size=MEDIUM, type=BREAD, shipNumber=1} awaiting loading in PierLoader{shipType=BREAD needToLoadShips=4 loadedShips=0}
+2023-04-26 23:19:11,577::Ship{size=BIG, type=BANANAS, shipNumber=4} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:11,577::Ship{size=MEDIUM, type=BANANAS, shipNumber=3} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:12,578::Ship{size=BIG, type=CLOTHES, shipNumber=8} is taken from the tunnel
+2023-04-26 23:19:12,578::Ship{size=MEDIUM, type=CLOTHES, shipNumber=5} is taken from the tunnel
+2023-04-26 23:19:12,578::Ship{size=SMALL, type=BANANAS, shipNumber=6} is taken from the tunnel
+2023-04-26 23:19:12,578::Ship{size=MEDIUM, type=CLOTHES, shipNumber=13} arrived in the tunnel
+2023-04-26 23:19:12,578::Ship{size=BIG, type=CLOTHES, shipNumber=9} is taken from the tunnel
+2023-04-26 23:19:12,578::Ship{size=BIG, type=BANANAS, shipNumber=7} arrived in the tunnel
+2023-04-26 23:19:12,578::Ship{size=MEDIUM, type=BANANAS, shipNumber=12} arrived in the tunnel
+2023-04-26 23:19:12,578::Ship{size=SMALL, type=CLOTHES, shipNumber=14} arrived in the tunnel
+2023-04-26 23:19:12,578::Ship{size=MEDIUM, type=BANANAS, shipNumber=11} arrived in the tunnel
+2023-04-26 23:19:12,578::Ship{size=MEDIUM, type=BREAD, shipNumber=10} is taken from the tunnel
+2023-04-26 23:19:12,579::Ship{size=MEDIUM, type=CLOTHES, shipNumber=5} awaiting loading in PierLoader{shipType=CLOTHES needToLoadShips=7 loadedShips=0}
+2023-04-26 23:19:12,579::Ship{size=BIG, type=CLOTHES, shipNumber=8} awaiting loading in PierLoader{shipType=CLOTHES needToLoadShips=7 loadedShips=0}
+2023-04-26 23:19:12,580::Ship{size=SMALL, type=BANANAS, shipNumber=6} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:12,580::Ship{size=MEDIUM, type=BREAD, shipNumber=10} awaiting loading in PierLoader{shipType=BREAD needToLoadShips=4 loadedShips=0}
+2023-04-26 23:19:12,581::Ship{size=BIG, type=CLOTHES, shipNumber=9} awaiting loading in PierLoader{shipType=CLOTHES needToLoadShips=7 loadedShips=0}
+2023-04-26 23:19:12,582::PierLoader{shipType=CLOTHES needToLoadShips=7 loadedShips=0} : start loading Ship{size=BIG, type=CLOTHES, shipNumber=8}
+2023-04-26 23:19:12,583::PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0} : start loading Ship{size=BIG, type=BANANAS, shipNumber=0}
+2023-04-26 23:19:13,590::Ship{size=BIG, type=BANANAS, shipNumber=19} arrived in the tunnel
+2023-04-26 23:19:13,590::Ship{size=SMALL, type=CLOTHES, shipNumber=14} is taken from the tunnel
+2023-04-26 23:19:13,590::Ship{size=BIG, type=BREAD, shipNumber=16} arrived in the tunnel
+2023-04-26 23:19:13,590::Ship{size=MEDIUM, type=CLOTHES, shipNumber=15} arrived in the tunnel
+2023-04-26 23:19:13,590::Ship{size=MEDIUM, type=CLOTHES, shipNumber=13} is taken from the tunnel
+2023-04-26 23:19:13,590::Ship{size=MEDIUM, type=BANANAS, shipNumber=11} is taken from the tunnel
+2023-04-26 23:19:13,590::Ship{size=BIG, type=CLOTHES, shipNumber=18} arrived in the tunnel
+2023-04-26 23:19:13,590::Ship{size=MEDIUM, type=BANANAS, shipNumber=17} arrived in the tunnel
+2023-04-26 23:19:13,590::Ship{size=BIG, type=BANANAS, shipNumber=7} is taken from the tunnel
+2023-04-26 23:19:13,590::Ship{size=MEDIUM, type=BANANAS, shipNumber=12} is taken from the tunnel
+2023-04-26 23:19:13,591::Ship{size=SMALL, type=CLOTHES, shipNumber=14} awaiting loading in PierLoader{shipType=CLOTHES needToLoadShips=7 loadedShips=0}
+2023-04-26 23:19:13,592::Ship{size=MEDIUM, type=BANANAS, shipNumber=11} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:13,593::Ship{size=MEDIUM, type=CLOTHES, shipNumber=13} awaiting loading in PierLoader{shipType=CLOTHES needToLoadShips=7 loadedShips=0}
+2023-04-26 23:19:13,593::PierLoader{shipType=BREAD needToLoadShips=4 loadedShips=0} : start loading Ship{size=MEDIUM, type=BREAD, shipNumber=1}
+2023-04-26 23:19:13,594::Ship{size=MEDIUM, type=BANANAS, shipNumber=12} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:13,594::Ship{size=BIG, type=BANANAS, shipNumber=7} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:14,600::Ship{size=BIG, type=BANANAS, shipNumber=19} is taken from the tunnel
+2023-04-26 23:19:14,600::Ship{size=MEDIUM, type=BANANAS, shipNumber=17} is taken from the tunnel
+2023-04-26 23:19:14,600::Ship{size=BIG, type=CLOTHES, shipNumber=18} is taken from the tunnel
+2023-04-26 23:19:14,600::Ship{size=BIG, type=BREAD, shipNumber=16} is taken from the tunnel
+2023-04-26 23:19:14,600::Ship{size=MEDIUM, type=CLOTHES, shipNumber=15} is taken from the tunnel
+2023-04-26 23:19:14,601::Ship{size=BIG, type=BANANAS, shipNumber=19} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:14,601::Ship{size=BIG, type=CLOTHES, shipNumber=18} awaiting loading in PierLoader{shipType=CLOTHES needToLoadShips=7 loadedShips=0}
+2023-04-26 23:19:14,602::Ship{size=MEDIUM, type=BANANAS, shipNumber=17} awaiting loading in PierLoader{shipType=BANANAS needToLoadShips=9 loadedShips=0}
+2023-04-26 23:19:14,603::Ship{size=MEDIUM, type=CLOTHES, shipNumber=15} awaiting loading in PierLoader{shipType=CLOTHES needToLoadShips=7 loadedShips=0}
+2023-04-26 23:19:14,603::Ship{size=BIG, type=BREAD, shipNumber=16} awaiting loading in PierLoader{shipType=BREAD needToLoadShips=4 loadedShips=0}
+2023-04-26 23:19:18,600::PierLoader{shipType=BREAD needToLoadShips=3 loadedShips=1} : loaded Ship{size=MEDIUM, type=BREAD, shipNumber=1}
+2023-04-26 23:19:18,601::PierLoader{shipType=BREAD needToLoadShips=3 loadedShips=1} : start loading Ship{size=BIG, type=BREAD, shipNumber=2}
+2023-04-26 23:19:22,591::PierLoader{shipType=CLOTHES needToLoadShips=6 loadedShips=1} : loaded Ship{size=BIG, type=CLOTHES, shipNumber=8}
+2023-04-26 23:19:22,591::PierLoader{shipType=BANANAS needToLoadShips=8 loadedShips=1} : loaded Ship{size=BIG, type=BANANAS, shipNumber=0}
+2023-04-26 23:19:22,591::PierLoader{shipType=CLOTHES needToLoadShips=6 loadedShips=1} : start loading Ship{size=MEDIUM, type=CLOTHES, shipNumber=5}
+2023-04-26 23:19:22,592::PierLoader{shipType=BANANAS needToLoadShips=8 loadedShips=1} : start loading Ship{size=BIG, type=BANANAS, shipNumber=4}
+2023-04-26 23:19:27,601::PierLoader{shipType=CLOTHES needToLoadShips=5 loadedShips=2} : loaded Ship{size=MEDIUM, type=CLOTHES, shipNumber=5}
+2023-04-26 23:19:27,601::PierLoader{shipType=CLOTHES needToLoadShips=5 loadedShips=2} : start loading Ship{size=BIG, type=CLOTHES, shipNumber=9}
+2023-04-26 23:19:28,608::PierLoader{shipType=BREAD needToLoadShips=2 loadedShips=2} : loaded Ship{size=BIG, type=BREAD, shipNumber=2}
+2023-04-26 23:19:28,609::PierLoader{shipType=BREAD needToLoadShips=2 loadedShips=2} : start loading Ship{size=MEDIUM, type=BREAD, shipNumber=10}
+2023-04-26 23:19:32,593::PierLoader{shipType=BANANAS needToLoadShips=7 loadedShips=2} : loaded Ship{size=BIG, type=BANANAS, shipNumber=4}
+2023-04-26 23:19:32,593::PierLoader{shipType=BANANAS needToLoadShips=7 loadedShips=2} : start loading Ship{size=MEDIUM, type=BANANAS, shipNumber=3}
+2023-04-26 23:19:33,622::PierLoader{shipType=BREAD needToLoadShips=1 loadedShips=3} : loaded Ship{size=MEDIUM, type=BREAD, shipNumber=10}
+2023-04-26 23:19:33,623::PierLoader{shipType=BREAD needToLoadShips=1 loadedShips=3} : start loading Ship{size=BIG, type=BREAD, shipNumber=16}
+2023-04-26 23:19:37,606::PierLoader{shipType=CLOTHES needToLoadShips=4 loadedShips=3} : loaded Ship{size=BIG, type=CLOTHES, shipNumber=9}
+2023-04-26 23:19:37,606::PierLoader{shipType=BANANAS needToLoadShips=6 loadedShips=3} : loaded Ship{size=MEDIUM, type=BANANAS, shipNumber=3}
+2023-04-26 23:19:37,606::PierLoader{shipType=CLOTHES needToLoadShips=4 loadedShips=3} : start loading Ship{size=SMALL, type=CLOTHES, shipNumber=14}
+2023-04-26 23:19:37,607::PierLoader{shipType=BANANAS needToLoadShips=6 loadedShips=3} : start loading Ship{size=SMALL, type=BANANAS, shipNumber=6}
+2023-04-26 23:19:38,616::PierLoader{shipType=CLOTHES needToLoadShips=3 loadedShips=4} : loaded Ship{size=SMALL, type=CLOTHES, shipNumber=14}
+2023-04-26 23:19:38,616::PierLoader{shipType=BANANAS needToLoadShips=5 loadedShips=4} : loaded Ship{size=SMALL, type=BANANAS, shipNumber=6}
+2023-04-26 23:19:38,616::PierLoader{shipType=CLOTHES needToLoadShips=3 loadedShips=4} : start loading Ship{size=MEDIUM, type=CLOTHES, shipNumber=13}
+2023-04-26 23:19:38,617::PierLoader{shipType=BANANAS needToLoadShips=5 loadedShips=4} : start loading Ship{size=MEDIUM, type=BANANAS, shipNumber=11}
+2023-04-26 23:19:43,626::PierLoader{shipType=BREAD needToLoadShips=0 loadedShips=4} : loaded Ship{size=BIG, type=BREAD, shipNumber=16}
+2023-04-26 23:19:43,626::PierLoader{shipType=BANANAS needToLoadShips=4 loadedShips=5} : loaded Ship{size=MEDIUM, type=BANANAS, shipNumber=11}
+2023-04-26 23:19:43,626::PierLoader{shipType=CLOTHES needToLoadShips=2 loadedShips=5} : loaded Ship{size=MEDIUM, type=CLOTHES, shipNumber=13}
+2023-04-26 23:19:43,626::PierLoader{shipType=BREAD needToLoadShips=0 loadedShips=4} has finished its work
+2023-04-26 23:19:43,627::PierLoader{shipType=BANANAS needToLoadShips=4 loadedShips=5} : start loading Ship{size=MEDIUM, type=BANANAS, shipNumber=12}
+2023-04-26 23:19:43,627::PierLoader{shipType=CLOTHES needToLoadShips=2 loadedShips=5} : start loading Ship{size=BIG, type=CLOTHES, shipNumber=18}
+2023-04-26 23:19:48,637::PierLoader{shipType=BANANAS needToLoadShips=3 loadedShips=6} : loaded Ship{size=MEDIUM, type=BANANAS, shipNumber=12}
+2023-04-26 23:19:48,637::PierLoader{shipType=BANANAS needToLoadShips=3 loadedShips=6} : start loading Ship{size=BIG, type=BANANAS, shipNumber=7}
+2023-04-26 23:19:53,629::PierLoader{shipType=CLOTHES needToLoadShips=1 loadedShips=6} : loaded Ship{size=BIG, type=CLOTHES, shipNumber=18}
+2023-04-26 23:19:53,629::PierLoader{shipType=CLOTHES needToLoadShips=1 loadedShips=6} : start loading Ship{size=MEDIUM, type=CLOTHES, shipNumber=15}
+2023-04-26 23:19:58,644::PierLoader{shipType=CLOTHES needToLoadShips=0 loadedShips=7} : loaded Ship{size=MEDIUM, type=CLOTHES, shipNumber=15}
+2023-04-26 23:19:58,644::PierLoader{shipType=BANANAS needToLoadShips=2 loadedShips=7} : loaded Ship{size=BIG, type=BANANAS, shipNumber=7}
+2023-04-26 23:19:58,644::PierLoader{shipType=CLOTHES needToLoadShips=0 loadedShips=7} has finished its work
+2023-04-26 23:19:58,645::PierLoader{shipType=BANANAS needToLoadShips=2 loadedShips=7} : start loading Ship{size=BIG, type=BANANAS, shipNumber=19}
+2023-04-26 23:20:08,658::PierLoader{shipType=BANANAS needToLoadShips=1 loadedShips=8} : loaded Ship{size=BIG, type=BANANAS, shipNumber=19}
+2023-04-26 23:20:08,658::PierLoader{shipType=BANANAS needToLoadShips=1 loadedShips=8} : start loading Ship{size=MEDIUM, type=BANANAS, shipNumber=17}
+2023-04-26 23:20:13,660::PierLoader{shipType=BANANAS needToLoadShips=0 loadedShips=9} : loaded Ship{size=MEDIUM, type=BANANAS, shipNumber=17}
+2023-04-26 23:20:13,660::PierLoader{shipType=BANANAS needToLoadShips=0 loadedShips=9} has finished its work
+2023-04-26 23:20:13,740::All submits done!
