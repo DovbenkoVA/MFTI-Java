@@ -6,24 +6,22 @@ import dovbenko.hw3.tsk2.ringprocessor.RingProcessor;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import static java.lang.Thread.sleep;
 
-public class Node implements Runnable {
+public final class Node implements Runnable {
     private static final long PROCESSING_TIME = 1L;
     private final int nodeId;
     private Node nextNode;
     private Node coordinator;
-    private Boolean isCoordinator;
     private final Semaphore semaphore;
     private final ArrayBlockingQueue<DataPackage> bufferStack;
     private DataStorage dataStorage;
 
     public Node(int nodeId, int dataPackageNumber, Semaphore processor) {
         this.nodeId = nodeId;
-        this.bufferStack = new ArrayBlockingQueue<>(dataPackageNumber);
+        this.bufferStack = new ArrayBlockingQueue<>(dataPackageNumber, true);
         this.semaphore = processor;
     }
 
@@ -39,16 +37,21 @@ public class Node implements Runnable {
         this.nextNode = nextNode;
     }
 
+    public Node getNextNode() {
+        return nextNode;
+    }
+
     public void setCoordinator(Node coordinator) {
         this.coordinator = coordinator;
     }
 
-    public Boolean getCoordinator() {
-        return isCoordinator;
+    public static long getProcessingTime() {
+        return PROCESSING_TIME;
+
     }
 
-    public void setCoordinator(Boolean coordinator) {
-        isCoordinator = coordinator;
+    public Node getCoordinator() {
+        return coordinator;
     }
 
     public ArrayBlockingQueue<DataPackage> getBuffer() {
@@ -64,54 +67,49 @@ public class Node implements Runnable {
     }
 
     @Override
-    public void run() {
-        Logger logger = Logger.getLogger(RingProcessor.class.getName());
-        try {
-            while (!coordinator.getDataStorage().allDataDelivered() || !bufferStack.isEmpty()) {
-                // semaphore.acquire();
-                logger.info(String.format("Node: %s Completed: %d / %d Buffer: %s",
-                        this.getNodeId(),
-                        coordinator.getDataStorage().getDELIVERED_DATA_SiZE(),
-                        coordinator.getDataStorage().getDATA_RING_CAPACITY(),
-                        bufferStack));
-                logger.info(String.format("Node: %s try take data", this.getNodeId()));
-//                DataPackage dataPackage = bufferStack.take();
-                DataPackage dataPackage = bufferStack.poll(1000L, TimeUnit.MILLISECONDS);
-                logger.info(String.format("Node: %s get data", this.getNodeId()));
-
-                sleep(PROCESSING_TIME);
-                if (dataPackage.getDestinationNode() == this) {
-                    coordinator.getDataStorage().getDELIVERED_DATA().put(dataPackage);
-                    logger.info(String.format("node: %s Package %s has reached its destination",
-                            this.getNodeId(), dataPackage));
-
-                } else {
-                    nextNode.getBuffer().put(dataPackage);
-                    logger.info(String.format("Move node: %s --> %s Package %s ",
-                            this.getNodeId(), nextNode.getNodeId(), dataPackage));
-                }
-                //semaphore.release();
-                logger.info(String.format("Node: %s Buffer size: %s",
-                        this.getNodeId(),
-                        bufferStack.size()));
-
-                logger.info(String.format("Data storage volume is %s", dataStorage.getDELIVERED_DATA_SiZE()));
-            }
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+    public String toString() {
+        return "Node{"
+                + "nodeId=" + nodeId
+                + ", nextNode=" + nextNode.getNodeId()
+                + ", coordinator=" + coordinator.getNodeId()
+                + ", bufferStack=" + bufferStack
+                + '}';
     }
 
     @Override
-    public String toString() {
-        return "Node{" +
-                "nodeId=" + nodeId +
-                ", nextNode=" + nextNode.getNodeId() +
-                ", coordinator=" + coordinator.getNodeId() +
-//                ", semaphore=" + semaphore +
-                ", bufferStack=" + bufferStack +
-                '}';
+    public void run() {
+        Logger logger = Logger.getLogger(RingProcessor.class.getName());
+        DataStorage coordinatorDataStorage = this.coordinator.getDataStorage();
+        try {
+            while (!coordinatorDataStorage.allDataDelivered()) {
+                if (!bufferStack.isEmpty()) {
+                    DataPackage dataPackage = bufferStack.take();
+
+                    sleep(Node.getProcessingTime());
+                    if (dataPackage.getDestinationNode() == this) {
+                        coordinatorDataStorage.getDeliveredData().put(dataPackage);
+                        dataPackage.setEndTime(System.nanoTime());
+                        logger.info(String.format("node: %s Package %s has reached its destination",
+                                this.nodeId, dataPackage));
+                        logger.info(String.format("Node: %s Completed: %d / %d Buffer: %s",
+                                this.nodeId,
+                                coordinatorDataStorage.getDeliveredDataSize(),
+                                coordinatorDataStorage.getDataRingCapacity(),
+                                this.bufferStack));
+
+                    } else {
+                        nextNode.getBuffer().put(dataPackage);
+                        logger.info(String.format("Move node: %s --> %s Package %s ",
+                                this.nodeId, this.nextNode.getNodeId(), dataPackage));
+                    }
+                } else {
+                    sleep(Node.getProcessingTime());
+
+                }
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+
 }

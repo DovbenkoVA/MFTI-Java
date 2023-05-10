@@ -4,28 +4,29 @@ import dovbenko.hw3.tsk2.datapackage.DataPackage;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class DataStorage {
-    private final int DATA_RING_CAPACITY;
-    private final ArrayBlockingQueue<DataPackage> DELIVERED_DATA;
+public final class DataStorage {
+    private final int dataRingCapacity;
+    private final ArrayBlockingQueue<DataPackage> deliveredData;
 
-    public DataStorage(int DATA_RING_CAPACITY) {
-        this.DATA_RING_CAPACITY = DATA_RING_CAPACITY;
-        this.DELIVERED_DATA = new ArrayBlockingQueue<DataPackage>(DATA_RING_CAPACITY);
+    public DataStorage(int dataRingCapacity) {
+        this.dataRingCapacity = dataRingCapacity;
+        this.deliveredData = new ArrayBlockingQueue<>(dataRingCapacity);
     }
 
     public synchronized boolean allDataDelivered() {
-        return DELIVERED_DATA.size() == DATA_RING_CAPACITY;
+        return deliveredData.size() == dataRingCapacity;
     }
 
-    public ArrayBlockingQueue<DataPackage> getDELIVERED_DATA() {
-        return DELIVERED_DATA;
+    public ArrayBlockingQueue<DataPackage> getDeliveredData() {
+         return deliveredData;
     }
 
-    public int getDATA_RING_CAPACITY() {
-        return DATA_RING_CAPACITY;
+    public synchronized int getDataRingCapacity() {
+        return dataRingCapacity;
     }
 
-    public int getDELIVERED_DATA_SiZE() {
-        return DELIVERED_DATA.size();
+    public synchronized int getDeliveredDataSize() {
+        return deliveredData.size();
     }
+
 }

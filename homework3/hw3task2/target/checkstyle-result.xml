@@ -1,26 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="10.3.3">
-<file name="D:\Teaching\Java\IdeaProjects\MFTI\dovbenkovl-hw3\hw3task2\src\main\java\dovbenko\hw3\tsk2\bufferstack\BufferStack.java">
-</file>
-<file name="D:\Teaching\Java\IdeaProjects\MFTI\dovbenkovl-hw3\hw3task2\src\main\java\dovbenko\hw3\tsk2\datapackage\DataPackage.java">
-<error line="20" column="5" severity="error" message="Похоже, что класс &apos;DataPackage&apos; предназначен для расширения (может быть подклассом), но у метода &apos;getDestinationNode&apos; нет javadoc с описанием того, как это безопасно сделать. Если класс не предназначен для расширения, то сделайте класс &apos;DataPackage&apos; final или сделайте метод &apos;getDestinationNode&apos; static/final/abstract/пустым, или добавьте методу разрешенную аннотацию." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="24" column="5" severity="error" message="Похоже, что класс &apos;DataPackage&apos; предназначен для расширения (может быть подклассом), но у метода &apos;getStartTime&apos; нет javadoc с описанием того, как это безопасно сделать. Если класс не предназначен для расширения, то сделайте класс &apos;DataPackage&apos; final или сделайте метод &apos;getStartTime&apos; static/final/abstract/пустым, или добавьте методу разрешенную аннотацию." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="28" column="5" severity="error" message="Похоже, что класс &apos;DataPackage&apos; предназначен для расширения (может быть подклассом), но у метода &apos;getData&apos; нет javadoc с описанием того, как это безопасно сделать. Если класс не предназначен для расширения, то сделайте класс &apos;DataPackage&apos; final или сделайте метод &apos;getData&apos; static/final/abstract/пустым, или добавьте методу разрешенную аннотацию." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="28" column="28" severity="error" message="Перед &apos;{&apos; нет пробела." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-</file>
-<file name="D:\Teaching\Java\IdeaProjects\MFTI\dovbenkovl-hw3\hw3task2\src\main\java\dovbenko\hw3\tsk2\Main.java">
-<error line="7" column="1" severity="error" message="Utils-классы не должны иметь публичных конструкторов или конструктор по умолчанию." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
-<error line="10" column="53" severity="error" message="Магическое число &apos;10&apos; ." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
-</file>
-<file name="D:\Teaching\Java\IdeaProjects\MFTI\dovbenkovl-hw3\hw3task2\src\main\java\dovbenko\hw3\tsk2\node\Node.java">
-<error line="15" column="30" severity="error" message="Переменная &apos;allData&apos; должна быть private и иметь методы доступа." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="22" column="9" severity="error" message="В конструкции &apos;if&apos; должны использоваться &apos;{}&apos;." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
-<error line="22" column="9" severity="error" message="После &apos;if&apos; нет пробела." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
-<error line="26" column="5" severity="error" message="Похоже, что класс &apos;Node&apos; предназначен для расширения (может быть подклассом), но у метода &apos;getNodeId&apos; нет javadoc с описанием того, как это безопасно сделать. Если класс не предназначен для расширения, то сделайте класс &apos;Node&apos; final или сделайте метод &apos;getNodeId&apos; static/final/abstract/пустым, или добавьте методу разрешенную аннотацию." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="33" column="5" severity="error" message="Похоже, что класс &apos;Node&apos; предназначен для расширения (может быть подклассом), но у метода &apos;getData&apos; нет javadoc с описанием того, как это безопасно сделать. Если класс не предназначен для расширения, то сделайте класс &apos;Node&apos; final или сделайте метод &apos;getData&apos; static/final/abstract/пустым, или добавьте методу разрешенную аннотацию." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="37" column="5" severity="error" message="Похоже, что класс &apos;Node&apos; предназначен для расширения (может быть подклассом), но у метода &apos;getBuffer&apos; нет javadoc с описанием того, как это безопасно сделать. Если класс не предназначен для расширения, то сделайте класс &apos;Node&apos; final или сделайте метод &apos;getBuffer&apos; static/final/abstract/пустым, или добавьте методу разрешенную аннотацию." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-</file>
 <file name="D:\Teaching\Java\IdeaProjects\MFTI\dovbenkovl-hw3\hw3task2\src\main\java\dovbenko\hw3\tsk2\ringprocessor\RingProcessor.java">
-<error line="33" column="16" severity="error" message="Переменная &apos;timeList&apos; должна быть private и иметь методы доступа." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
 </file>
 </checkstyle>
